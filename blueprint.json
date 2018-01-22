@@ -11,12 +11,21 @@
   ],
   "generators": {
     "node": [
-      "generator-ibm-cloud-enablement"
+      "generator-ibm-cloud-enablement",
+      "generator-ibm-service-enablement",
+      "generator-starterkit-content-downloader"
     ]
   },
   "generatorOptions": {
     "generator-ibm-cloud-enablement": {
       "version": "0.6.x"
+    },
+    "generator-ibm-service-enablement": {
+      "version": "0.6.x"
+    },
+    "generator-starterkit-content-downloader": {
+      "scope": "@arf",
+      "version": "0.0.x"
     }
   },
   "requiredCapabilities": [
