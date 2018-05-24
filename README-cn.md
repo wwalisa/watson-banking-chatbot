@@ -3,6 +3,8 @@
 
 *阅读本文的其他语言版本：[English](README.md)。*
 
+> Watson Conversation 现在改名 Watson Assistant。尽管本 Code Pattern 中的图片展示的服务名还是 Watson Conversation，但步骤及处理过程依旧有效。
+
 # 利用 FAQ Discovery、Anger Detection 和 Natural Language Understanding 来创建银行业务聊天机器人
 在次 Code Pattern 中，我们将使用 Node.js 和 Watson Conversation 来创建一个聊天机器人。通过使用 Natural Language Understanding 来识别实体并使用 Tone Analyzer 来检测客户情绪，从而改进 Conversation 流程。要获取 FAQ，请调用 Discovery 服务，使用段落检索从文档集合中提取答案。
 
@@ -53,7 +55,7 @@
 使用 ``Deploy to IBM Cloud`` 按钮**或**在本地创建服务并运行。
 
 ## Deploy to IBM Cloud
-[![部署到 Bluemix](https://metrics-tracker.mybluemix.net/stats/527357940ca5e1027fbf945add3b15c4/button.svg)](https://bluemix.net/deploy?repository=https://github.com/IBM/watson-banking-chatbot.git)
+[![部署到 Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/watson-banking-chatbot.git)
 
 1.按上面的 ``Deploy to IBM Cloud`` 按钮，然后单击 ``Deploy``。
 
@@ -202,7 +204,7 @@ TONE_ANALYZER_PASSWORD=<add_tone_analyzer_password>
 
 # 链接
 
-* [youku 上的演示](http://v.youku.com/v_show/id_XMzQ2MDc3NDIzNg==.html)
+* [优酷上的演示](http://v.youku.com/v_show/id_XMzQ2MDc3NDIzNg==.html)
 * [Watson Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
 * [Relevancy Training 演示手册](https://github.com/akmnua/relevancy_passage_bww)
 
@@ -224,27 +226,3 @@ Discovery 环境，此操作将失败。如果您尚未使用 Discovery，请查
 
 # 许可
 [Apache 2.0](LICENSE)
-
-# 隐私声明
-如果使用 `Deploy to IBM Cloud` 按钮，那么会跟踪某些指标，并将以下
-信息发送到每个部署上的 [Deployment Tracker](https://github.com/IBM-Bluemix/cf-deployment-tracker-service) 和
-[Metrics collector](https://github.com/IBM/metrics-collector-service) 服务：
-
-* Node.js 程序包版本
-* Node.js 存储库 URL
-* 应用程序名称 (`application_name`)
-* 应用程序 GUID (`application_id`)
-* 应用程序实例索引编号 (`instance_index`)
-* 空间 ID (`space_id`)
-* 应用程序版本 (`application_version`)
-* 应用程序 URI (`application_uris`)
-* Cloud Foundry API (`cf_api`)
-* 绑定服务的标签
-* 每个绑定服务的实例数量和相关计划信息
-* repository.yaml 文件中的元数据
-
-这些数据收集自样本应用程序中的 `package.json` 和 `repository.yaml` 文件，以及 IBM Cloud 和其他 Cloud Foundry 平台中的 `VCAP_APPLICATION` 和 `VCAP_SERVICES` 环境变量。IBM 将使用这些数据来跟踪与样本应用程序在 IBM Cloud 上的部署相关的指标，方便我们度量示例的实用性，以便持续改进所提供的内容。仅有那些包含代码以对 Deployment Tracker 服务执行 ping 操作的样本应用程序的部署过程才会被跟踪。
-
-## 禁用部署跟踪
-
-要禁用跟踪，只需从顶级目录中的 ``app.js`` 文件中移除 ``require("cf-deployment-tracker-client").track();`` 和 ``require('metrics-tracker-client').track();`` 即可。
